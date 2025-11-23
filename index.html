@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Download MetaMask Extension: Chrome Install Help Guide</title>
     
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="robots" content="index, follow">
     <meta name="description" content="Complete guide on how to download MetaMask extension on Chrome, configure your wallet, and sync the mobile app for use on all devices.">
     <meta name="keywords" content="MetaWide,MetaMask,Extension,Download,Chrome,Wallet,Mobile,App">
     <meta name="theme-color" content="#C4550A">
@@ -36,6 +36,7 @@
     <link rel="canonical" href="https://metawide.github.io/">
 	
 	<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="robots" href="/robots.txt">
     
     <link rel="icon" href="https://metawide.github.io/Favicon.ico?v=1" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="https://metawide.github.io/Icon-180x180.png?v=1">
@@ -652,6 +653,76 @@
         gap: 1rem;
       }
 
+      .post-thumbnail {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .post-thumbnail img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        max-height: 400px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .disclaimer-balloon {
+        background: linear-gradient(135deg, rgba(196, 85, 10, 0.15), rgba(219, 60, 6, 0.15));
+        border: 1px solid var(--primary-purple);
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        animation: slideDown 0.4s ease-out;
+      }
+
+      .disclaimer-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        color: var(--primary-purple);
+      }
+
+      .disclaimer-text {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .disclaimer-text strong {
+        color: var(--primary-purple);
+        font-weight: 600;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       @media (max-width: 1024px) {
         .container {
           grid-template-columns: 1fr;
@@ -702,6 +773,24 @@
           flex-direction: column;
           text-align: center;
         }
+
+        .post-thumbnail img {
+          max-height: 250px;
+        }
+
+        .disclaimer-balloon {
+          padding: 0.875rem 1rem;
+          gap: 0.75rem;
+        }
+
+        .disclaimer-icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        .disclaimer-text {
+          font-size: 0.85rem;
+        }
       }
     </style>
   </head>
@@ -721,6 +810,14 @@
     <!-- Main Content -->
     <div class="container">
       <main id="main-content" class="main-content" role="main">
+        <div class="disclaimer-balloon" role="note" aria-label="Disclaimer Notice">
+          <svg class="disclaimer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <p class="disclaimer-text">
+            <strong>Disclaimer:</strong> This guide is an independent tutorial created by a third-party author and is not affiliated with, endorsed by, or sponsored by MetaMask, ConsenSys, or any of their affiliates. Always verify you are on the official website before downloading or entering any information.
+          </p>
+        </div>
         <article class="forum-post" itemscope itemtype="https://schema.org/Article">
           <header class="post-header">
             <h1 class="post-title" itemprop="headline">Download MetaMask Extension: Chrome Install Help Guide</h1>
@@ -732,101 +829,162 @@
                     <span class="author-name" itemprop="name">Riley_Chen</span>
                     <span class="member-badge">8 Year Member</span>
                   </div>
-                  <time class="post-date" datetime="2025-11-23T14:30:00+00:00" itemprop="datePublished">November 23, 2025</time>
-                  <meta itemprop="dateModified" content="2025-11-23T14:30:00+00:00">
+                  <time class="post-date" datetime="2025-11-22T09:17:00+00:00" itemprop="datePublished">November 22, 2025</time>
+                  <meta itemprop="dateModified" content="2025-11-22T09:17:00+00:00">
                 </div>
               </div>
             </div>
           </header>
-      
+          <figure class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <img src="https://metawide.github.io/Thumbnail-1200x630.png" alt="Download MetaMask Extension: Chrome Install Help Guide" width="1200" height="630" loading="eager" fetchpriority="high" itemprop="url contentUrl">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="630">
+            <meta itemprop="caption" content="Download MetaMask Extension: Chrome Install Help Guide">
+            <figcaption class="sr-only">Download MetaMask Extension: Chrome Install Help Guide</figcaption>
+          </figure>
           <div class="post-content" itemprop="articleBody">
-            <p>Hey everyone, Riley here. After years of walking newcomers through their first MetaMask install on Chrome, I decided it was time to write the definitive community guide we’ve all been linking to on MetaWide. This is <strong>not</strong> official MetaMask or Google documentation — it’s a 100% community-created, battle-tested guide built from the real-world experiences (and painful lessons) of thousands of MetaWide members.</p>
-      
-            <p>The aim is crystal clear: help you download and install the <strong>real</strong> MetaMask extension on Chrome, sidestep every scam and beginner trap, and adopt the exact security habits that veteran MetaWide users live by. Let’s get you set up safely and confidently.</p>
-      
-            <div class="note-box" role="note" aria-label="Community disclaimer">
-              <strong>MetaWide Community Disclaimer (Please Read Carefully)</strong><br>
-              This guide is written by regular members — not MetaMask, Consensys, Google, or any official entity. No legitimate support team (MetaMask, MetaWide moderators, exchanges, etc.) will <strong>ever</strong> ask for your secret recovery phrase or private keys. If anyone does, it’s a scam. Always cross-check with official sources.
-            </div>
-      
-            <h2 id="understanding-metamask">What Is MetaMask, Really?</h2>
-            <p>MetaMask is a non-custodial cryptocurrency wallet that lives in your browser. You — and only you — control the private keys. Once installed, it becomes your bridge to Ethereum, Polygon, Arbitrum, BNB Chain, and thousands of dApps. On MetaWide we use it in almost every tutorial because mastering MetaMask teaches you the core logic of every other browser wallet.</p>
-      
-            <h2 id="before-you-begin">Essential Checks Before You Start</h2>
-            <p>Skip these and you’re asking for trouble — we’ve seen it too many times on MetaWide:</p>
+            <p>MetaMask is the most popular cryptocurrency wallet and browser extension that lets you interact with Ethereum and thousands of decentralized applications (dApps). Whether you're new to Web3 or an experienced user, installing the official MetaMask extension on Chrome (or the MetaMask mobile app on your phone) is the first step to managing your crypto assets safely. This up-to-date guide walks you through how to download and install MetaMask on Chrome and mobile devices in just a few minutes using only official sources.</p>
+            <h2>Table of Contents</h2>
             <ul>
-              <li><strong>Fully updated Chrome</strong> → chrome://settings/help (outdated browsers are exploit magnets)</li>
-              <li><strong>Stable internet</strong> (flaky connections cause corrupted installs)</li>
-              <li><strong>Clean machine</strong> — up-to-date OS, reputable antivirus, no cracked software or sketchy extensions</li>
-              <li><strong>Strong, unique passwords + 2FA</strong> on any linked exchange/email accounts</li>
+              <li>
+                <a href="#prerequisites">Prerequisites</a>
+              </li>
+              <li>
+                <a href="#step-by-step">Step-by-Step Installation Guide</a>
+              </li>
+              <li>
+                <a href="#mobile">How to Install MetaMask Mobile App (iOS & Android)</a>
+              </li>
+              <li>
+                <a href="#troubleshooting">Common Issues & Troubleshooting</a>
+              </li>
+              <li>
+                <a href="#security">Important Security Tips After Installation</a>
+              </li>
+              <li>
+                <a href="#faq">Frequently Asked Questions (FAQ)</a>
+              </li>
+              <li>
+                <a href="#resources">Helpful Resources & Official Links</a>
+              </li>
             </ul>
-      
-            <h2 id="installation-walkthrough">Step-by-Step Installation (The MetaWide Way)</h2>
-      
-            <h3 id="accessing-chrome-store">1. Get to the Real Chrome Web Store</h3>
-            <p>Type “Chrome Web Store” into Google and click the official link (chrome.google.com/webstore) or go via Chrome menu → Extensions → “Open Chrome Web Store”.</p>
-            <p><strong>Never</strong> download MetaMask from random sites, .crx files, torrents, Discord links, or “installer” executables.</p>
-      
-            <h3 id="verifying-authenticity">2. Verify You Have the Genuine Extension</h3>
-            <p>Before clicking “Add to Chrome”, check all of these (MetaWide members never skip this step):</p>
+            <h2 id="prerequisites">Prerequisites</h2>
             <ul>
-              <li>Publisher: <strong>metamask.io</strong></li>
-              <li>Icon: the classic orange fox</li>
-              <li>User count: <strong>30+ million</strong> (as of Nov 2025)</li>
-              <li>Regular updates (at least monthly)</li>
-              <li>Thousands of reviews over years, natural rating distribution</li>
-              <li>No weird permissions (clipboard access, downloads folder, etc.)</li>
+              <li>Google Chrome, Brave, Edge, or any Chromium-based browser (latest version recommended)</li>
+              <li>A stable internet connection</li>
+              <li>At least 100 MB of free disk space</li>
+              <li>For mobile: iPhone with iOS 15+ or Android device with Android 8.0+</li>
             </ul>
-            <p>If anything feels off — close the tab and search again.</p>
-      
-            <h3 id="installing-extension">3. Install & Pin It</h3>
-            <p>Click “Add to Chrome” → “Add Extension” → after install, click the puzzle piece → pin the fox icon to your toolbar (makes tampering obvious).</p>
-      
-            <h3 id="initial-setup">4. Create a New Wallet</h3>
-            <p>Click the fox → “Create a New Wallet” → set a <strong>strong, unique password</strong> (16+ characters, password manager recommended).</p>
-      
-            <h3 id="recovery-phrase">5. Back Up Your Recovery Phrase (The Most Important Step)</h3>
-            <p>Your 12-word phrase = your wallet. Anyone with it can take everything, forever.</p>
-            <p>MetaWide golden rules:</p>
+            <h2 id="step-by-step">Step-by-Step: Install MetaMask Extension on Chrome</h2>
+            <ol>
+              <li>
+                <strong>Open the official MetaMask website</strong>
+                <br> Go to <a href="https://metamask.io" rel="nofollow noopener">https://metamask.io</a> in your Chrome browser. Always start here to avoid fake or phishing sites.
+              </li>
+              <li>
+                <strong>Click "Download"</strong>
+                <br> On the homepage, click the large blue "Download button. MetaMask will automatically detect you're using Chrome.
+              </li>
+              <li>
+                <strong>Choose "Install MetaMask for Chrome"</strong>
+                <br> You'll be redirected to the Chrome Web Store page for the official MetaMask extension (verified publisher: "https://metamask.io").
+              </li>
+              <li>
+                <strong>Click "Add to Chrome"</strong>
+                <br> A pop-up will appear. Click the blue <strong>Add to Chrome</strong> button.
+              </li>
+              <li>
+                <strong>Confirm installation</strong>
+                <br> Another confirmation window will ask "Add 'MetaMask'?". Click <strong>Add extension</strong>.
+              </li>
+              <li>
+                <strong>Wait for the download and installation</strong>
+                <br> The extension will download and install automatically (usually under 10 seconds). You'll see the MetaMask fox icon appear in the top-right toolbar.
+              </li>
+              <li>
+                <strong>Pin the extension (recommended)</strong>
+                <br> Click the puzzle icon → find MetaMask → click the pin icon so it's always visible.
+              </li>
+              <li>
+                <strong>Click the MetaMask fox icon and select "Create a Wallet" or "Import Wallet"</strong>
+                <br> Follow the on-screen instructions to set up a new wallet or recover an existing one using your seed phrase.
+              </li>
+            </ol>
+            <p>Congratulations! You have successfully installed MetaMask on Chrome.</p>
+            <h2 id="mobile">How to Install MetaMask Mobile App (iOS & Android)</h2>
+            <ol>
+              <li>Open the <strong>App Store</strong> (iPhone) or <strong>Google Play Store</strong> (Android). </li>
+              <li>Search for "MetaMask" (developer: ConsenSys).</li>
+              <li>Tap <strong>Get</strong> or <strong>Install</strong>. </li>
+              <li>Open the app and choose <strong>Create a New Wallet</strong> or <strong>Import using Secret Recovery Phrase</strong>. </li>
+              <li>Follow the setup wizard (same process as desktop).</li>
+            </ol>
+            <h2 id="troubleshooting">Common Issues & Troubleshooting</h2>
+            <table>
+              <tr>
+                <th>Problem</th>
+                <th>Solution</th>
+              </tr>
+              <tr>
+                <td>"Add to Chrome button is grayed out</td>
+                <td>You're probably on a managed/work computer. Ask your administrator or use a personal browser.</td>
+              </tr>
+              <tr>
+                <td>Extension won't install or shows "CRX_HEADER_INVALID"</td>
+                <td>Download directly from metamask.io instead of third-party sites. Disable conflicting extensions.</td>
+              </tr>
+              <tr>
+                <td>Fox icon missing after install</td>
+                <td>Click the puzzle piece → MetaMask → Pin.</td>
+              </tr>
+              <tr>
+                <td>"This site can't be reached" when opening metamask.io</td>
+                <td>Use a VPN or different network; some ISPs block crypto sites.</td>
+              </tr>
+              <tr>
+                <td>Phishing or fake MetaMask pop-up</td>
+                <td>Never enter your seed phrase on any website. Only trust metamask.io and the official Chrome Web Store.</td>
+              </tr>
+            </table>
+            <h2 id="security">Important Security Tips After Installation</h2>
             <ul>
-              <li>Write it on paper (or stamp into metal)</li>
-              <li>Verify every word twice</li>
-              <li>Store multiple copies in separate secure locations</li>
-              <li><strong>Never</strong> screenshot, type into apps, or store digitally</li>
-              <li>Never share it with anyone — ever</li>
+              <li>Write down your 12-word Secret Recovery Phrase on paper and store it offline.</li>
+              <li>Never share your seed phrase or private keys with anyone.</li>
+              <li>Enable 2FA on associated email accounts.</li>
+              <li>Always double-check website URLs before connecting your wallet.</li>
+              <li>Use hardware wallets (Ledger/Trezor) with MetaMask for large amounts.</li>
             </ul>
-      
-            <h3 id="first-look">6. First Look & Test Transaction</h3>
-            <p>Do a $5–10 test send/receive before moving real money. Every MetaWide veteran does this — it saves endless stress.</p>
-      
-            <h2 id="post-setup-recommendations">Post-Setup Best Practices (MetaWide Veterans Swear By)</h2>
+            <h2 id="faq">Frequently Asked Questions (FAQ)</h2>
+            <h3>Is MetaMask free to download?</h3>
+            <p>Yes, the extension and mobile app are 100% free.</p>
+            <h3>Can I use MetaMask on Firefox or Safari?</h3>
+            <p>Yes. Visit metamask.io and select the correct browser.</p>
+            <h3>Is it safe to download MetaMask in 2025?</h3>
+            <p>Yes, as long as you download from the official site (metamask.io) or verified app stores.</p>
+            <h3>What's the difference between MetaMask extension and mobile app?</h3>
+            <p>The extension is best for desktop dApps; the mobile app includes a built-in browser and easier mobile signing.</p>
+            <h3>Can I have MetaMask on multiple devices?</h3>
+            <p>Yes. Import the same Secret Recovery Phrase on each device.</p>
+            <h3>I lost my seed phrase. What now?</h3>
+            <p>Unfortunately, if you don't have the seed phrase, your funds are permanently lost. MetaMask cannot recover them.</p>
+            <h2 id="resources">Helpful Resources & Official Links</h2>
             <ul>
-              <li>Set auto-lock to 5–10 minutes</li>
-              <li>Only add networks using official RPCs (check MetaWide verified list)</li>
-              <li>Bookmark real dApp URLs — never Google them when connecting</li>
-              <li>Monthly extension audit at chrome://extensions</li>
-              <li>Consider hardware wallet integration once holdings grow</li>
-              <li>Regularly revoke old token approvals (revoke.cash)</li>
+              <li>Official site: <a href="https://metamask.io" rel="nofollow noopener">https://metamask.io</a>
+              </li>
+              <li>Support & Help Center: <a href="https://support.metamask.io" rel="nofollow noopener">https://support.metamask.io</a>
+              </li>
+              <li>Chrome Web Store page: <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" rel="nofollow noopener">MetaMask on Chrome Web Store</a>
+              </li>
+              <li>Community forum: <a href="https://community.metamask.io" rel="nofollow noopener">https://community.metamask.io</a>
+              </li>
+              <li>Twitter/X: <a href="https://twitter.com/metamask" rel="nofollow noopener">@MetaMask</a>
+              </li>
             </ul>
-      
-            <h2 id="common-problems">Common Issues & Fixes</h2>
-            <p>Icon disappeared → re-pin or restart Chrome<br>
-            dApp can’t detect wallet → unlock + correct network + try “Reset Account” in Advanced settings<br>
-            Stuck transactions → speed up/cancel or reset account<br>
-            Forgot password → reinstall & import phrase<br>
-            Lost phrase & lost access → funds gone forever (this is why we hammer backup security)</p>
-      
-            <h2 id="final-thoughts">Final Words from the MetaWide Community</h2>
-            <p>Installing MetaMask takes 10 minutes. Doing it securely, with the habits that actually protect your funds long-term, is what this entire guide is about. Start small, test everything, verify twice, and never rush when real money is involved.</p>
-            <p>We’ve all been the nervous newbie once. Ask questions here — we’d rather answer a “dumb” question than see another scam victim thread.</p>
-            <p>Welcome to self-custody. Stay safe, stay skeptical, and enjoy the ride.</p>
           </div>
         </article>
-      
         <!-- Comments Section -->
         <section class="comments-section" aria-labelledby="comments-heading">
-          <h2 id="comments-heading" class="comments-header">Community Discussion (8)</h2>
-      
+          <h2 id="comments-heading" class="comments-header">Community Discussion (6)</h2>
           <article class="comment" itemscope itemtype="https://schema.org/Comment">
             <header class="comment-header">
               <div class="avatar" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);" aria-hidden="true">AS</div>
@@ -834,14 +992,11 @@
                 <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <span itemprop="name">Alex_Silva</span>
                 </div>
-                <time class="comment-date" datetime="2025-11-23T15:15:00+00:00" itemprop="datePublished">November 23, 2025 at 3:15 PM</time>
+                <time class="comment-date" datetime="2025-11-22T10:23:00+00:00" itemprop="datePublished">November 22, 2025 at 10:23 AM</time>
               </div>
             </header>
-            <div class="comment-body" itemprop="text">
-              Best MetaMask guide I’ve ever seen on MetaWide. The recovery phrase section should be mandatory reading for every newcomer. One extra tip: always check the “last updated” date in the store — the real one gets updates constantly.
-            </div>
+            <div class="comment-body" itemprop="text"> Does anyone know if the MetaMask Chrome extension is still safe to install in 2025? I keep seeing scam warnings. </div>
           </article>
-      
           <article class="comment" itemscope itemtype="https://schema.org/Comment" lang="ja">
             <header class="comment-header">
               <div class="avatar" style="background: linear-gradient(135deg, #ec4899, #f97316);" aria-hidden="true">YK</div>
@@ -849,14 +1004,11 @@
                 <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <span itemprop="name">Yuki_Kimura</span>
                 </div>
-                <time class="comment-date" datetime="2025-11-23T16:42:00+00:00" itemprop="datePublished">November 23, 2025 at 4:42 PM</time>
+                <time class="comment-date" datetime="2025-11-22T11:48:00+00:00" itemprop="datePublished">November 22, 2025 at 11:48 AM</time>
               </div>
             </header>
-            <div class="comment-body" itemprop="text">
-              めっちゃ詳しくて助かりました！特にメタマスク ログイン時の公式ストア確認手順が完璧です。質問ですが、Chromeプロファイルを仕事用とプライベート用で分けるとき、それぞれ別のウォレットにした方が安全でしょうか？
-            </div>
+            <div class="comment-body" itemprop="text"> めっちゃ詳しくて助かりました！特にメタマスク ログイン時の公式ストア確認手順が完璧です。質問ですが、Chromeプロファイルを仕事用とプライベート用で分けるとき、それぞれ別のウォレットにした方が安全でしょうか？ </div>
           </article>
-      
           <article class="comment" itemscope itemtype="https://schema.org/Comment">
             <header class="comment-header">
               <div class="avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6);" aria-hidden="true">LB</div>
@@ -864,30 +1016,11 @@
                 <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <span itemprop="name">Lina_Berg</span>
                 </div>
-                <time class="comment-date" datetime="2025-11-23T17:28:00+00:00" itemprop="datePublished">November 23, 2025 at 5:28 PM</time>
+                <time class="comment-date" datetime="2025-11-22T14:35:00+00:00" itemprop="datePublished">November 22, 2025 at 2:35 PM</time>
               </div>
             </header>
-            <div class="comment-body" itemprop="text">
-              Bookmarked for every friend I onboard. The permission verification part saved me once — spotted a fake that asked for clipboard access. Five extra minutes of checking is nothing compared to losing everything.
-            </div>
+            <div class="comment-body" itemprop="text"> @Alex_Silva Yes, 100% safe if you go directly to https://metamask.io and click Download → Chrome. Never search "MetaMask" on Google and click random ads. </div>
           </article>
-      
-          <article class="comment" itemscope itemtype="https://schema.org/Comment">
-            <header class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);" aria-hidden="true">MK</div>
-              <div>
-                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  <span itemprop="name">Marcus_Khan</span>
-                </div>
-                <span class="member-badge">7 Year Member</span>
-                <time class="comment-date" datetime="2025-11-23T18:55:00+00:00" itemprop="datePublished">November 23, 2025 at 6:55 PM</time>
-              </div>
-            </header>
-            <div class="comment-body" itemprop="text">
-              @Yuki_Kimura Yes — separate Chrome profiles with separate wallets is a strategy many MetaWide old-timers use. Total isolation. I run three: testing, daily use, and cold storage monitoring.
-            </div>
-          </article>
-      
           <article class="comment" itemscope itemtype="https://schema.org/Comment" lang="ko">
             <header class="comment-header">
               <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);" aria-hidden="true">HS</div>
@@ -895,14 +1028,11 @@
                 <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <span itemprop="name">Hyeon_Soo</span>
                 </div>
-                <time class="comment-date" datetime="2025-11-23T19:33:00+00:00" itemprop="datePublished">November 23, 2025 at 7:33 PM</time>
+                <time class="comment-date" datetime="2025-11-22T16:52:00+00:00" itemprop="datePublished">November 22, 2025 at 4:52 PM</time>
               </div>
             </header>
-            <div class="comment-body" itemprop="text">
-              한국어로도 완벽한 가이드 감사합니다! 처음 메타마스크 설치할 때 네트워크 추가가 제일 무서웠는데, 공식 문서 확인하라는 조언 덕분에 안전하게 설정했어요.
-            </div>
+            <div class="comment-body" itemprop="text"> 한국어로도 완벽한 가이드 감사합니다! 처음 메타마스크 설치할 때 네트워크 추가가 제일 무서웠는데, 공식 문서 확인하라는 조언 덕분에 안전하게 설정했어요. </div>
           </article>
-      
           <article class="comment" itemscope itemtype="https://schema.org/Comment">
             <header class="comment-header">
               <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);" aria-hidden="true">JE</div>
@@ -910,30 +1040,11 @@
                 <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <span itemprop="name">Jade_Evans</span>
                 </div>
-                <time class="comment-date" datetime="2025-11-23T20:47:00+00:00" itemprop="datePublished">November 23, 2025 at 8:47 PM</time>
+                <time class="comment-date" datetime="2025-11-22T18:19:00+00:00" itemprop="datePublished">November 22, 2025 at 6:19 PM</time>
               </div>
             </header>
-            <div class="comment-body" itemprop="text">
-              The $5 test transaction advice is pure gold. Did exactly that and slept so much better when I moved the rest. Wish someone had told me this two years ago.
-            </div>
+            <div class="comment-body" itemprop="text"> I clicked "Add to Chrome" but nothing happens. The button is grayed out. Help! </div>
           </article>
-      
-          <article class="comment" itemscope itemtype="https://schema.org/Comment">
-            <header class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #ef4444, #ec4899);" aria-hidden="true">TW</div>
-              <div>
-                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  <span itemprop="name">Tom_Walsh</span>
-                </div>
-                <span class="member-badge">9 Year Member</span>
-                <time class="comment-date" datetime="2025-11-23T22:14:00+00:00" itemprop="datePublished">November 23, 2025 at 10:14 PM</time>
-              </div>
-            </header>
-            <div class="comment-body" itemprop="text">
-              Hardware wallet + MetaMask combo changed my life. Once you cross a certain amount, the peace of mind is worth every penny.
-            </div>
-          </article>
-      
           <article class="comment" itemscope itemtype="https://schema.org/Comment">
             <header class="comment-header">
               <div class="avatar" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);" aria-hidden="true">KL</div>
@@ -941,16 +1052,15 @@
                 <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <span itemprop="name">Klara_Lind</span>
                 </div>
-                <time class="comment-date" datetime="2025-11-23T23:59:00+00:00" itemprop="datePublished">November 23, 2025 at 11:59 PM</time>
+                <time class="comment-date" datetime="2025-11-22T20:41:00+00:00" itemprop="datePublished">November 22, 2025 at 8:41 PM</time>
               </div>
             </header>
-            <div class="comment-body" itemprop="text">
-              I check my paper backup every 3 months now for legibility. Small habit, huge peace of mind. Thanks for the amazing guide, Riley.
-            </div>
+            <div class="comment-body" itemprop="text"> @Jade_Evans That usually means you're on a company/school Chrome that blocks extensions. Try installing it on Brave browser instead or use your personal laptop. Works instantly on Brave for me. </div>
           </article>
-      
           <aside class="comment-notice" role="complementary">
-            <p><strong>Join the conversation—MetaWide membership required</strong></p>
+            <p>
+              <strong>Join the conversation—MetaWide membership required</strong>
+            </p>
             <p>This discussion is part of our community-driven knowledge base. To participate, you'll need a MetaWide account.</p>
             <button class="btn btn-primary" onclick="openModal('inviteModal')">Request Invitation</button>
           </aside>
@@ -1093,7 +1203,9 @@
           <button class="close-modal" onclick="closeModal('privacyModal')" aria-label="Close privacy policy dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <p><em>Last updated: January 2025</em></p>
+          <p>
+            <em>Last updated: January 2025</em>
+          </p>
           <h3>1. Information We Collect</h3>
           <p>We collect information you provide directly to us, including your email address, username, and any content you post on the forum. We also automatically collect certain information about your device and how you interact with our services, including IP addresses, browser type, and usage patterns.</p>
           <h3>2. How We Use Your Information</h3>
@@ -1121,7 +1233,9 @@
           <button class="close-modal" onclick="closeModal('termsModal')" aria-label="Close terms of use dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <p><em>Last updated: January 2025</em></p>
+          <p>
+            <em>Last updated: January 2025</em>
+          </p>
           <h3>1. Acceptance of Terms</h3>
           <p>By accessing and using MetaWide, you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our services.</p>
           <h3>2. Invitation-Only Membership</h3>
@@ -1153,16 +1267,26 @@
           <button class="close-modal" onclick="closeModal('cookieModal')" aria-label="Close cookie policy dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <p><em>Last updated: January 2025</em></p>
+          <p>
+            <em>Last updated: January 2025</em>
+          </p>
           <h3>What Are Cookies</h3>
           <p>Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.</p>
           <h3>How We Use Cookies</h3>
           <p>We use cookies for the following purposes:</p>
           <ul>
-            <li><strong>Essential Cookies:</strong> These are necessary for the website to function properly, including authentication and security features.</li>
-            <li><strong>Preference Cookies:</strong> These remember your settings and preferences, such as language and theme choices.</li>
-            <li><strong>Analytics Cookies:</strong> These help us understand how visitors interact with our website by collecting and reporting information anonymously.</li>
-            <li><strong>Functionality Cookies:</strong> These enable enhanced functionality and personalization, such as remembering your login state.</li>
+            <li>
+              <strong>Essential Cookies:</strong> These are necessary for the website to function properly, including authentication and security features.
+            </li>
+            <li>
+              <strong>Preference Cookies:</strong> These remember your settings and preferences, such as language and theme choices.
+            </li>
+            <li>
+              <strong>Analytics Cookies:</strong> These help us understand how visitors interact with our website by collecting and reporting information anonymously.
+            </li>
+            <li>
+              <strong>Functionality Cookies:</strong> These enable enhanced functionality and personalization, such as remembering your login state.
+            </li>
           </ul>
           <h3>Third-Party Cookies</h3>
           <p>We may allow trusted third-party services to place cookies on your device for analytics and advertising purposes. These third parties have their own privacy policies governing the use of such cookies.</p>
@@ -1194,20 +1318,28 @@
         <div class="modal-body">
           <p>We'd love to hear from you! Whether you have questions, feedback, or need assistance, our team is here to help.</p>
           <h3>General Inquiries</h3>
-          <p>For general questions about MetaWide, please email us at:<br>
-            <strong><a href="mailto:contact@metawide.github.io">contact@metawide.github.io</a></strong>
+          <p>For general questions about MetaWide, please email us at: <br>
+            <strong>
+              <a href="mailto:contact@metawide.github.io">contact@metawide.github.io</a>
+            </strong>
           </p>
           <h3>Technical Support</h3>
-          <p>If you're experiencing technical issues or need help with your account:<br>
-            <strong><a href="mailto:support@metawide.github.io">support@metawide.github.io</a></strong>
+          <p>If you're experiencing technical issues or need help with your account: <br>
+            <strong>
+              <a href="mailto:support@metawide.github.io">support@metawide.github.io</a>
+            </strong>
           </p>
           <h3>Privacy & Legal</h3>
-          <p>For privacy concerns or legal inquiries:<br>
-            <strong><a href="mailto:legal@metawide.github.io">legal@metawide.github.io</a></strong>
+          <p>For privacy concerns or legal inquiries: <br>
+            <strong>
+              <a href="mailto:legal@metawide.github.io">legal@metawide.github.io</a>
+            </strong>
           </p>
           <h3>Partnership Opportunities</h3>
-          <p>Interested in partnering with MetaWide?<br>
-            <strong><a href="mailto:partnerships@metawide.github.io">partnerships@metawide.github.io</a></strong>
+          <p>Interested in partnering with MetaWide? <br>
+            <strong>
+              <a href="mailto:partnerships@metawide.github.io">partnerships@metawide.github.io</a>
+            </strong>
           </p>
           <h3>Response Time</h3>
           <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent matters, please indicate "URGENT" in your email subject line.</p>
@@ -1219,9 +1351,7 @@
     <!-- Cookie Consent Banner -->
     <aside id="cookieConsent" class="cookie-consent active" role="region" aria-label="Cookie consent banner">
       <div class="cookie-content">
-        <div class="cookie-text">
-          We use cookies and similar technologies to enhance your experience, analyze site traffic, and personalize content. By continuing to use MetaWide, you consent to our use of cookies. Learn more in our <a href="#" onclick="openModal('cookieModal'); return false;">Cookie Policy</a> and <a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>.
-        </div>
+        <div class="cookie-text"> We use cookies and similar technologies to enhance your experience, analyze site traffic, and personalize content. By continuing to use MetaWide, you consent to our use of cookies. Learn more in our <a href="#" onclick="openModal('cookieModal'); return false;">Cookie Policy</a> and <a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>. </div>
         <div class="cookie-buttons">
           <button class="btn btn-secondary" onclick="declineCookies()" aria-label="Decline cookies">Decline</button>
           <button class="btn btn-primary" onclick="acceptCookies()" aria-label="Accept all cookies">Accept All</button>
@@ -1289,7 +1419,7 @@
         }
       });
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
           if (href !== '#' && href.length > 1) {
             const target = document.querySelector(href);
