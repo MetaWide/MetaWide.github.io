@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Download MetaMask Extension: Chrome Install Help Guide</title>
     
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -31,6 +31,7 @@
     <meta name="twitter:site" content="@realmetawide">
     <meta name="twitter:creator" content="@realmetawide">
     <meta name="twitter:image" content="https://metawide.github.io/Thumbnail-1200x630.png">
+	<meta name="twitter:image:alt" content="Complete guide on how to download MetaMask extension on Chrome, configure your wallet, and sync the mobile app for use on all devices.">
     
     <link rel="canonical" href="https://metawide.github.io/">
 	
@@ -106,16 +107,15 @@
 
       :root {
         --primary-purple: #C4550A;
-        --purple-hover:  #9A3408;
-        --dark-bg:   #050505;
+        --purple-hover: #9A3408;
+        --dark-bg: #050505;
         --darker-bg: #000000;
-        --card-bg:   #050505;
+        --card-bg: #050505;
         --border-color: #333333;
-        --text-primary:   #ffffff;
+        --text-primary: #ffffff;
         --text-secondary: #d4d4d4;
-        --text-muted:     #9ca3af;
+        --text-muted: #9ca3af;
       }
-
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
@@ -266,7 +266,7 @@
       .member-badge {
         display: inline-block;
         background-color: rgba(196, 85, 10, 0.2);
-        color: #ffffff; /* BURAYI DEĞİŞTİRDİM – metin artık beyaz */
+        color: #ffffff;
         padding: 0.2rem 0.6rem;
         border-radius: 4px;
         font-size: 0.75rem;
@@ -323,6 +323,14 @@
 
       .post-content strong {
         color: var(--text-primary);
+      }
+
+      .post-content code {
+        background-color: rgba(196, 85, 10, 0.1);
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9em;
       }
 
       .note-box {
@@ -698,67 +706,71 @@
     </style>
   </head>
   <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-main" style="position: absolute; left: -9999px; z-index: 999;">Skip to main content</a>
     <!-- Header -->
-    <header>
-      <nav>
-        <a href="https://metawide.github.io/" class="logo">MetaWide</a>
+    <header role="banner">
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="https://metawide.github.io/" class="logo" aria-label="MetaWide Home">MetaWide</a>
         <div class="nav-buttons">
-          <button class="btn btn-secondary" onclick="openModal('loginModal')">Login</button>
-          <button class="btn btn-primary" onclick="openModal('inviteModal')">Join with Invite</button>
+          <button class="btn btn-secondary" onclick="openModal('loginModal')" aria-label="Login to MetaWide">Login</button>
+          <button class="btn btn-primary" onclick="openModal('inviteModal')" aria-label="Join MetaWide with invitation">Join with Invite</button>
         </div>
       </nav>
     </header>
     <!-- Main Content -->
     <div class="container">
-      <main class="main-content">
-        <article class="forum-post">
+      <main id="main-content" class="main-content" role="main">
+        <article class="forum-post" itemscope itemtype="https://schema.org/Article">
           <header class="post-header">
-            <h1 class="post-title">Download MetaMask Extension: Chrome Install Help Guide</h1>
+            <h1 class="post-title" itemprop="headline">Download MetaMask Extension: Chrome Install Help Guide</h1>
             <div class="post-meta">
-              <div class="author-info">
-                <div class="avatar">RC</div>
+              <div class="author-info" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <div class="avatar" aria-hidden="true">RC</div>
                 <div class="author-details">
                   <div>
-                    <span class="author-name">Riley_Chen</span>
+                    <span class="author-name" itemprop="name">Riley_Chen</span>
                     <span class="member-badge">8 Year Member</span>
                   </div>
-                  <time class="post-date" datetime="2025-11-23T14:30:00+00:00">November 23, 2025</time>
+                  <time class="post-date" datetime="2025-11-23T14:30:00+00:00" itemprop="datePublished">November 23, 2025</time>
+                  <meta itemprop="dateModified" content="2025-11-23T14:30:00+00:00">
                 </div>
               </div>
             </div>
           </header>
-          <div class="post-content">
+          <div class="post-content" itemprop="articleBody">
             <p>Hey everyone, Riley here. I've been helping newcomers set up MetaMask on Chrome for years now, and I figured it was time to consolidate everything I've learned into one comprehensive MetaWide thread. This isn't official documentation from MetaMask, Google, or any corporate entity—it's a community-driven guide based on real-world experience from MetaWide members who've successfully navigated the setup process countless times.</p>
             <p>The goal here is straightforward: I want to walk you through downloading and installing the official MetaMask extension on Google Chrome while avoiding the common pitfalls that trip up beginners. We'll cover verification steps to ensure you're getting the legitimate extension, security practices that the MetaWide community has refined over the years, and troubleshooting tips for issues I've personally encountered or helped others resolve. This is practical advice from one community member to another, not financial guidance or an official security audit.</p>
-            
             <h2 id="table-of-contents">Navigation Guide</h2>
-            <ul>
-              <li><a href="#understanding-metamask">Understanding MetaMask: What You're Actually Installing</a></li>
-              <li><a href="#community-disclaimer">Important Community Disclaimer & Safety Notice</a></li>
-              <li><a href="#before-you-begin">Before You Begin: Essential Prerequisites</a></li>
-              <li><a href="#installation-walkthrough">Complete Installation Walkthrough</a>
-                <ul>
-                  <li><a href="#accessing-chrome-store">Accessing the Official Chrome Web Store</a></li>
-                  <li><a href="#verifying-authenticity">Verifying the Authentic MetaMask Extension</a></li>
-                  <li><a href="#installing-extension">Installing the Extension Safely</a></li>
-                  <li><a href="#pinning-toolbar">Pinning MetaMask to Your Browser Toolbar</a></li>
-                  <li><a href="#initial-setup">Initiating the Setup Process</a></li>
-                  <li><a href="#creating-password">Creating a Secure Password</a></li>
-                  <li><a href="#recovery-phrase">Understanding and Securing Your Recovery Phrase</a></li>
-                  <li><a href="#confirming-phrase">Confirming Your Recovery Phrase</a></li>
-                  <li><a href="#first-look">Your First Look at the MetaMask Interface</a></li>
-                </ul>
-              </li>
-              <li><a href="#post-setup-recommendations">Post-Installation Recommendations</a></li>
-              <li><a href="#ongoing-security">Ongoing Security Practices</a></li>
-              <li><a href="#common-problems">Troubleshooting Common Problems</a></li>
-              <li><a href="#final-thoughts">Final Thoughts from the MetaWide Community</a></li>
-            </ul>
+            <nav aria-label="Table of contents">
+              <ul>
+                <li><a href="#understanding-metamask">Understanding MetaMask: What You're Actually Installing</a></li>
+                <li><a href="#community-disclaimer">Important Community Disclaimer & Safety Notice</a></li>
+                <li><a href="#before-you-begin">Before You Begin: Essential Prerequisites</a></li>
+                <li><a href="#installation-walkthrough">Complete Installation Walkthrough</a>
+                  <ul>
+                    <li><a href="#accessing-chrome-store">Accessing the Official Chrome Web Store</a></li>
+                    <li><a href="#verifying-authenticity">Verifying the Authentic MetaMask Extension</a></li>
+                    <li><a href="#installing-extension">Installing the Extension Safely</a></li>
+                    <li><a href="#pinning-toolbar">Pinning MetaMask to Your Browser Toolbar</a></li>
+                    <li><a href="#initial-setup">Initiating the Setup Process</a></li>
+                    <li><a href="#creating-password">Creating a Secure Password</a></li>
+                    <li><a href="#recovery-phrase">Understanding and Securing Your Recovery Phrase</a></li>
+                    <li><a href="#confirming-phrase">Confirming Your Recovery Phrase</a></li>
+                    <li><a href="#first-look">Your First Look at the MetaMask Interface</a></li>
+                  </ul>
+                </li>
+                <li><a href="#post-setup-recommendations">Post-Installation Recommendations</a></li>
+                <li><a href="#ongoing-security">Ongoing Security Practices</a></li>
+                <li><a href="#common-problems">Troubleshooting Common Problems</a></li>
+                <li><a href="#final-thoughts">Final Thoughts from the MetaWide Community</a></li>
+              </ul>
+            </nav>
             <h2 id="understanding-metamask">Understanding MetaMask: What You're Actually Installing</h2>
             <p>Before we dive into the technical steps, let's establish what MetaMask actually is. MetaMask is a non-custodial cryptocurrency wallet that operates as a browser extension. The "non-custodial" part is crucial—it means you maintain complete control over your private keys and funds. MetaMask doesn't have access to your wallet; they can't freeze your assets, reverse transactions, or recover your funds if you lose access. This is fundamentally different from custodial services like exchanges where a third party holds your assets.</p>
             <p>Once you've got MetaMask installed in Chrome, it acts as a bridge between your browser and blockchain networks. You can interact with decentralized applications (dApps), execute smart contract transactions, manage Ethereum and ERC-20 tokens, and even connect to alternative networks like Polygon, Arbitrum, or BNB Smart Chain. Think of it as your digital passport to the decentralized web.</p>
             <p>Here on MetaWide, we reference MetaMask in probably 80% of our blockchain tutorials because once you understand how it works, you've essentially learned the operational logic behind most browser-based crypto wallets. The interface might differ slightly between wallets, but the core concepts remain consistent. This guide represents years of collective MetaWide member experience condensed into one resource.</p>
-            <div class="note-box" id="community-disclaimer">
+            <div class="note-box" id="community-disclaimer" role="note" aria-label="Important security disclaimer">
               <strong>Critical Community Disclaimer:</strong> This guide comes from the MetaWide community, not from MetaMask's official support team or any affiliated organization. Here's something I need you to understand completely: no legitimate support representative from MetaMask, MetaWide moderators, exchange staff, or any genuine support channel will EVER ask for your secret recovery phrase (also called a seed phrase) or private keys. Not via email, not in Discord DMs, not through live chat, not during a screen share session, and definitely not through a form submission. If anyone requests this information, you're dealing with a scammer—full stop. Treat every piece of advice in this guide as community wisdom that should be cross-referenced with official MetaMask documentation and your own research. Never compromise your browser's security settings or install unverified software just because someone claims it will "solve your problem."
             </div>
             <h2 id="before-you-begin">Before You Begin: Essential Prerequisites</h2>
@@ -819,6 +831,7 @@
               <li><strong>Create a New Wallet:</strong> Select this option if you're brand new to MetaMask and don't have an existing wallet. This will generate a completely new Ethereum address with a fresh recovery phrase. This is the path most first-time users will take, and it's what I'll be focusing on in this guide.</li>
               <li><strong>Import an Existing Wallet:</strong> Choose this if you already have a MetaMask wallet with a valid 12-word recovery phrase that you want to restore. This might be the case if you're setting up MetaMask on a new computer, you previously used MetaMask on a different browser, or you're following up on another MetaWide tutorial that had you create a wallet elsewhere. If you're importing, the same security principles apply—only enter your recovery phrase into the official MetaMask interface on a clean, trusted device.</li>
             </ol>
+            
             <p>For this guide, I'm assuming you're creating a new wallet. Click "Create a New Wallet" to proceed. MetaMask will likely present you with some basic information about how the wallet works and what you're agreeing to—take a moment to actually read this instead of just clicking through. Understanding how non-custodial wallets work will help you make better security decisions throughout your crypto journey.</p>
             <h3 id="creating-password">Creating a Secure Password</h3>
             <p>MetaMask will now ask you to create a password. It's important to understand what this password does and doesn't protect. This password encrypts your wallet data <em>locally within this specific Chrome profile</em>. It prevents someone who has physical access to your computer from opening MetaMask and seeing your balances or initiating transactions. However, this password does NOT protect your funds if someone obtains your recovery phrase—they could restore your wallet on a completely different device without ever knowing this password.</p>
@@ -937,187 +950,205 @@
           </div>
         </article>
         <!-- Comments Section -->
-        <section class="comments-section">
-          <h2 class="comments-header">Community Discussion (8)</h2>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">AS</div>
+        <section class="comments-section" aria-labelledby="comments-heading">
+          <h2 id="comments-heading" class="comments-header">Community Discussion (8)</h2>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);" aria-hidden="true">AS</div>
               <div>
-                <div class="comment-author">Alex_Sanders</div>
-                <time class="comment-date" datetime="2025-11-23T15:15:00+00:00">November 23, 2025 at 3:15 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Alex_Sanders</span>
+                </div>
+                <time class="comment-date" datetime="2025-11-23T15:15:00+00:00" itemprop="datePublished">November 23, 2025 at 3:15 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               Riley, this is probably the most comprehensive MetaWide guide I've seen for Chrome extension setup. The emphasis on recovery phrase security really resonates—I learned that lesson the hard way back in 2021 when I almost lost access to a wallet because I'd stored my backup in a password manager that got compromised. One thing I'd add based on my experience: when you're verifying the official extension in the Chrome Web Store, also check when it was last updated. The legitimate MetaMask extension gets regular updates, usually at least monthly. If you see a listing that hasn't been updated in 6+ months, that's another red flag that you might be looking at an abandoned clone rather than the real thing.
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #ec4899, #f97316);">TK</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment" lang="ja">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #ec4899, #f97316);" aria-hidden="true">TK</div>
               <div>
-                <div class="comment-author">Takeshi_Kobayashi</div>
-                <time class="comment-date" datetime="2025-11-23T16:42:00+00:00">November 23, 2025 at 4:42 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Takeshi_Kobayashi</span>
+                </div>
+                <time class="comment-date" datetime="2025-11-23T16:42:00+00:00" itemprop="datePublished">November 23, 2025 at 4:42 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               このMetaWideのガイドは本当に助かりました！Chrome に メタマスク ログイン する際の注意点がとても詳しく書かれていて、特に公式ストアでの確認方法が参考になりました。私が友人に勧めるときも、必ずユーザー数と更新履歴をチェックするように伝えています。一つ質問ですが、Chromeのプロファイルを複数使い分けている場合、それぞれに別のMetaMaskウォレットをインストールして管理するのは良い方法でしょうか？仕事用とプライベート用で分けたいと考えているのですが、セキュリティ面でのアドバイスがあれば教えてください。
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6);">MP</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #10b981, #3b82f6);" aria-hidden="true">MP</div>
               <div>
-                <div class="comment-author">Maria_Popescu</div>
-                <time class="comment-date" datetime="2025-11-23T17:28:00+00:00">November 23, 2025 at 5:28 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Maria_Popescu</span>
+                </div>
+                <time class="comment-date" datetime="2025-11-23T17:28:00+00:00" itemprop="datePublished">November 23, 2025 at 5:28 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               Excellent community resource—I'm bookmarking this for every newcomer I onboard. The section about verifying permissions during installation is critical. I've personally encountered two fake MetaMask extensions in the past year that requested permissions for downloading files and accessing clipboard history, which are completely unnecessary for wallet functionality. The warning signs were there, but someone less experienced might have missed them. MetaWide's emphasis on taking time during verification rather than rushing through is advice worth repeating. Better to spend an extra five minutes verifying than to lose funds to a malicious clone.
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">DM</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);" aria-hidden="true">DM</div>
               <div>
-                <div class="comment-author">David_Morrison <span class="member-badge">6 Year Member</span></div>
-                <time class="comment-date" datetime="2025-11-23T18:55:00+00:00">November 23, 2025 at 6:55 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">David_Morrison</span>
+                </div>
+                <span class="member-badge">6 Year Member</span>
+                <time class="comment-date" datetime="2025-11-23T18:55:00+00:00" itemprop="datePublished">November 23, 2025 at 6:55 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               @Takeshi_Kobayashi Great question about Chrome profiles. Using separate Chrome profiles with distinct MetaMask installations is actually a solid security practice that several MetaWide veterans recommend. Each profile is completely isolated, so you could have one profile for experimental DeFi interactions with a small amount of funds, and another profile for your main holdings. Just remember that each installation needs its own recovery phrase backup if you're creating separate wallets, not importing the same wallet across profiles. Personally, I use three profiles: one for development/testing, one for daily DeFi use, and one that's basically read-only for monitoring larger holdings that live on a hardware wallet. The overhead of managing multiple backups is worth the compartmentalization.
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">JL</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment" lang="ko">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);" aria-hidden="true">JL</div>
               <div>
-                <div class="comment-author">Jin_Lee</div>
-                <time class="comment-date" datetime="2025-11-23T19:33:00+00:00">November 23, 2025 at 7:33 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Jin_Lee</span>
+                </div>
+                <time class="comment-date" datetime="2025-11-23T19:33:00+00:00" itemprop="datePublished">November 23, 2025 at 7:33 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               정말 자세한 가이드 감사합니다. Chrome에서 メタマスク 를 처음 설치할 때 가장 헷갈렸던 부분이 네트워크 추가였는데, 이 글에서 "천천히, 공식 문서를 확인하면서 하나씩 추가하라"는 조언이 정확했습니다. 특히 RPC 엔드포인트를 임의의 사이트에서 클릭해서 추가하면 안 된다는 경고는 정말 중요합니다. 저는 Polygon과 Arbitrum을 추가할 때 각 프로젝트의 공식 문서를 직접 확인했고, MetaWide에서 검증된 정보와 대조했습니다. 시간이 조금 더 걸렸지만, 안전하게 설정할 수 있었습니다.
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">NC</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);" aria-hidden="true">NC</div>
               <div>
-                <div class="comment-author">Nina_Costa</div>
-                <time class="comment-date" datetime="2025-11-23T20:47:00+00:00">November 23, 2025 at 8:47 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Nina_Costa</span>
+                </div>
+                <time class="comment-date" datetime="2025-11-23T20:47:00+00:00" itemprop="datePublished">November 23, 2025 at 8:47 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               The emphasis on test transactions before moving significant amounts is something I wish I'd understood earlier. I moved $2,000 worth of ETH to a new MetaMask address without testing, and spent the next 20 minutes in complete anxiety wondering if I'd sent it to the right place or if I'd somehow messed up the address. Everything turned out fine, but that stress was completely avoidable—a $5 test would have given me confidence and let me verify the entire process with minimal risk. For anyone reading this guide: seriously, do the test transaction. It's worth the small gas fee for the peace of mind and learning experience.
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #ef4444, #ec4899);">RT</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #ef4444, #ec4899);" aria-hidden="true">RT</div>
               <div>
-                <div class="comment-author">Robert_Turner <span class="member-badge">10 Year Member</span></div>
-                <time class="comment-date" datetime="2025-11-23T22:14:00+00:00">November 23, 2025 at 10:14 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Robert_Turner</span>
+                </div>
+                <span class="member-badge">10 Year Member</span>
+                <time class="comment-date" datetime="2025-11-23T22:14:00+00:00" itemprop="datePublished">November 23, 2025 at 10:14 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               Riley's point about hardware wallet integration deserves extra emphasis. I used MetaMask as a standalone hot wallet for my first couple years in crypto, and while I was fortunate enough not to get compromised, the constant anxiety about my browser security wasn't worth it once my holdings grew. Switching to a Ledger paired with MetaMask as the interface was transformative—I get the convenience of MetaMask's browser integration with the security of knowing my private keys never touch an internet-connected device. For MetaWide members holding anything over $1,000, I'd strongly suggest budgeting for a hardware wallet sooner rather than later. Think of it as insurance that pays for itself by letting you sleep better at night.
             </div>
-          </div>
-          <div class="comment">
-            <div class="comment-header">
-              <div class="avatar" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);">SC</div>
+          </article>
+          <article class="comment" itemscope itemtype="https://schema.org/Comment">
+            <header class="comment-header">
+              <div class="avatar" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);" aria-hidden="true">SC</div>
               <div>
-                <div class="comment-author">Sarah_Chen</div>
-                <time class="comment-date" datetime="2025-11-23T23:59:00+00:00">November 23, 2025 at 11:59 PM</time>
+                <div class="comment-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <span itemprop="name">Sarah_Chen</span>
+                </div>
+                <time class="comment-date" datetime="2025-11-23T23:59:00+00:00" itemprop="datePublished">November 23, 2025 at 11:59 PM</time>
               </div>
-            </div>
-            <div class="comment-body">
+            </header>
+            <div class="comment-body" itemprop="text">
               This MetaWide guide covers everything I learned through trial and error over the past three years, consolidated into one resource. I particularly appreciate the nuanced discussion of what the password protects versus what the recovery phrase controls—that distinction confused me initially and I think it trips up a lot of newcomers who assume the password is the primary security mechanism. One additional tip based on my experience: I periodically verify my recovery phrase backup is still legible and correctly stored. Paper degrades, ink fades, handwriting that seemed clear when you wrote it might be ambiguous six months later. Every few months, I pull out my backup, verify I can read every word unambiguously, and make sure it's still stored securely. It's a small habit that could prevent a devastating situation later.
             </div>
-          </div>
-          <div class="comment-notice">
+          </article>
+          <aside class="comment-notice" role="complementary">
             <p><strong>Join the conversation—MetaWide membership required</strong></p>
             <p>This discussion is part of our community-driven knowledge base. To participate, you'll need a MetaWide account.</p>
             <button class="btn btn-primary" onclick="openModal('inviteModal')">Request Invitation</button>
-          </div>
+          </aside>
         </section>
       </main>
       <!-- Sidebar -->
-      <aside class="sidebar">
+      <aside class="sidebar" role="complementary" aria-label="Sidebar">
         <div class="sidebar-widget">
           <h3 class="widget-title">Advertisement</h3>
-          <div class="ad-space">
+          <div class="ad-space" role="img" aria-label="Advertisement space">
             <span>Ad Space Available</span>
           </div>
         </div>
-        <div class="sidebar-widget">
+        <nav class="sidebar-widget" aria-label="Social media links">
           <h3 class="widget-title">Follow Us</h3>
           <div class="social-icons">
-            <a href="https://x.com/realmetawide" class="social-icon" aria-label="X (Twitter)" title="X">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://x.com/realmetawide" class="social-icon" aria-label="Follow us on X (Twitter)" rel="noopener noreferrer" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </a>
-            <a href="https://www.youtube.com/@realmetawide" class="social-icon" aria-label="YouTube" title="YouTube">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://www.youtube.com/@realmetawide" class="social-icon" aria-label="Subscribe to our YouTube channel" rel="noopener noreferrer" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
-            <a href="https://github.com/metawide" class="social-icon" aria-label="GitHub" title="GitHub">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://github.com/metawide" class="social-icon" aria-label="View our GitHub repositories" rel="noopener noreferrer" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
-            <a href="https://medium.com/@realmetawide" class="social-icon" aria-label="Medium" title="Medium">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://medium.com/@realmetawide" class="social-icon" aria-label="Read our Medium articles" rel="noopener noreferrer" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
               </svg>
             </a>
-            <a href="https://www.pinterest.com/realmetawide" class="social-icon" aria-label="Pinterest" title="Pinterest">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://www.pinterest.com/realmetawide" class="social-icon" aria-label="Follow us on Pinterest" rel="noopener noreferrer" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
               </svg>
             </a>
-            <a href="https://www.tumblr.com/realmetawide" class="social-icon" aria-label="Tumblr" title="Tumblr">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://www.tumblr.com/realmetawide" class="social-icon" aria-label="Follow us on Tumblr" rel="noopener noreferrer" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z" />
               </svg>
             </a>
           </div>
-        </div>
+        </nav>
       </aside>
     </div>
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
       <div class="footer-content">
-        <div class="footer-links">
+        <nav class="footer-links" aria-label="Footer navigation">
           <a href="#" onclick="openModal('aboutModal'); return false;">About Us</a>
           <a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>
           <a href="#" onclick="openModal('termsModal'); return false;">Terms of Use</a>
           <a href="#" onclick="openModal('cookieModal'); return false;">Cookie Policy</a>
           <a href="#" onclick="openModal('contactModal'); return false;">Contact</a>
-        </div>
+        </nav>
         <div class="footer-bottom">
           <p>&copy; 2025 MetaWide. All rights reserved. Independent educational site; not affiliated with MetaMask or ConsenSys.</p>
         </div>
       </div>
     </footer>
     <!-- Login Modal -->
-    <div id="loginModal" class="modal">
+    <div id="loginModal" class="modal" role="dialog" aria-labelledby="loginModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Login to MetaWide</h2>
-          <button class="close-modal" onclick="closeModal('loginModal')" aria-label="Close">&times;</button>
+          <h2 id="loginModalTitle" class="modal-title">Login to MetaWide</h2>
+          <button class="close-modal" onclick="closeModal('loginModal')" aria-label="Close login dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <form onsubmit="event.preventDefault(); alert('The email address you entered is not linked to an account.');">
+          <form onsubmit="event.preventDefault(); alert('The email address you entered is not linked to an account.');" aria-label="Login form">
             <div class="form-group">
               <label for="login-email">Email Address</label>
-              <input type="email" id="login-email" required>
+              <input type="email" id="login-email" name="email" autocomplete="email" required aria-required="true">
             </div>
             <div class="form-group">
               <label for="login-password">Password</label>
-              <input type="password" id="login-password" required>
+              <input type="password" id="login-password" name="password" autocomplete="current-password" required aria-required="true">
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
           </form>
@@ -1125,26 +1156,26 @@
       </div>
     </div>
     <!-- Invite Modal -->
-    <div id="inviteModal" class="modal">
+    <div id="inviteModal" class="modal" role="dialog" aria-labelledby="inviteModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Join MetaWide</h2>
-          <button class="close-modal" onclick="closeModal('inviteModal')" aria-label="Close">&times;</button>
+          <h2 id="inviteModalTitle" class="modal-title">Join MetaWide</h2>
+          <button class="close-modal" onclick="closeModal('inviteModal')" aria-label="Close invitation dialog">&times;</button>
         </div>
         <div class="modal-body">
           <p style="margin-bottom: 1.5rem;">MetaWide is an exclusive, invitation-only community. To join, you must have a valid invitation code from an existing member.</p>
-          <form onsubmit="event.preventDefault(); alert('The invitation code you entered is incorrect.');">
+          <form onsubmit="event.preventDefault(); alert('The invitation code you entered is incorrect.');" aria-label="Registration form">
             <div class="form-group">
               <label for="invite-code">Invitation Code</label>
-              <input type="text" id="invite-code" placeholder="Enter your invite code" required>
+              <input type="text" id="invite-code" name="invite-code" placeholder="Enter your invite code" autocomplete="off" required aria-required="true">
             </div>
             <div class="form-group">
               <label for="invite-email">Email Address</label>
-              <input type="email" id="invite-email" required>
+              <input type="email" id="invite-email" name="email" autocomplete="email" required aria-required="true">
             </div>
             <div class="form-group">
               <label for="invite-password">Choose Password</label>
-              <input type="password" id="invite-password" required>
+              <input type="password" id="invite-password" name="password" autocomplete="new-password" required aria-required="true">
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
           </form>
@@ -1152,11 +1183,11 @@
       </div>
     </div>
     <!-- About Modal -->
-    <div id="aboutModal" class="modal">
+    <div id="aboutModal" class="modal" role="dialog" aria-labelledby="aboutModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">About MetaWide</h2>
-          <button class="close-modal" onclick="closeModal('aboutModal')" aria-label="Close">&times;</button>
+          <h2 id="aboutModalTitle" class="modal-title">About MetaWide</h2>
+          <button class="close-modal" onclick="closeModal('aboutModal')" aria-label="Close about dialog">&times;</button>
         </div>
         <div class="modal-body">
           <p>MetaWide is an exclusive, invitation-only forum community dedicated to fostering meaningful discussions about blockchain technology, cryptocurrency, decentralized finance, and Web3 innovations.</p>
@@ -1172,16 +1203,14 @@
       </div>
     </div>
     <!-- Privacy Policy Modal -->
-    <div id="privacyModal" class="modal">
+    <div id="privacyModal" class="modal" role="dialog" aria-labelledby="privacyModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Privacy Policy</h2>
-          <button class="close-modal" onclick="closeModal('privacyModal')" aria-label="Close">&times;</button>
+          <h2 id="privacyModalTitle" class="modal-title">Privacy Policy</h2>
+          <button class="close-modal" onclick="closeModal('privacyModal')" aria-label="Close privacy policy dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <p>
-            <em>Last updated: January 2025</em>
-          </p>
+          <p><em>Last updated: January 2025</em></p>
           <h3>1. Information We Collect</h3>
           <p>We collect information you provide directly to us, including your email address, username, and any content you post on the forum. We also automatically collect certain information about your device and how you interact with our services, including IP addresses, browser type, and usage patterns.</p>
           <h3>2. How We Use Your Information</h3>
@@ -1202,16 +1231,14 @@
       </div>
     </div>
     <!-- Terms of Use Modal -->
-    <div id="termsModal" class="modal">
+    <div id="termsModal" class="modal" role="dialog" aria-labelledby="termsModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Terms of Use</h2>
-          <button class="close-modal" onclick="closeModal('termsModal')" aria-label="Close">&times;</button>
+          <h2 id="termsModalTitle" class="modal-title">Terms of Use</h2>
+          <button class="close-modal" onclick="closeModal('termsModal')" aria-label="Close terms of use dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <p>
-            <em>Last updated: January 2025</em>
-          </p>
+          <p><em>Last updated: January 2025</em></p>
           <h3>1. Acceptance of Terms</h3>
           <p>By accessing and using MetaWide, you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our services.</p>
           <h3>2. Invitation-Only Membership</h3>
@@ -1236,33 +1263,23 @@
       </div>
     </div>
     <!-- Cookie Policy Modal -->
-    <div id="cookieModal" class="modal">
+    <div id="cookieModal" class="modal" role="dialog" aria-labelledby="cookieModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Cookie Policy</h2>
-          <button class="close-modal" onclick="closeModal('cookieModal')" aria-label="Close">&times;</button>
+          <h2 id="cookieModalTitle" class="modal-title">Cookie Policy</h2>
+          <button class="close-modal" onclick="closeModal('cookieModal')" aria-label="Close cookie policy dialog">&times;</button>
         </div>
         <div class="modal-body">
-          <p>
-            <em>Last updated: January 2025</em>
-          </p>
+          <p><em>Last updated: January 2025</em></p>
           <h3>What Are Cookies</h3>
           <p>Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.</p>
           <h3>How We Use Cookies</h3>
           <p>We use cookies for the following purposes:</p>
           <ul>
-            <li>
-              <strong>Essential Cookies:</strong> These are necessary for the website to function properly, including authentication and security features.
-            </li>
-            <li>
-              <strong>Preference Cookies:</strong> These remember your settings and preferences, such as language and theme choices.
-            </li>
-            <li>
-              <strong>Analytics Cookies:</strong> These help us understand how visitors interact with our website by collecting and reporting information anonymously.
-            </li>
-            <li>
-              <strong>Functionality Cookies:</strong> These enable enhanced functionality and personalization, such as remembering your login state.
-            </li>
+            <li><strong>Essential Cookies:</strong> These are necessary for the website to function properly, including authentication and security features.</li>
+            <li><strong>Preference Cookies:</strong> These remember your settings and preferences, such as language and theme choices.</li>
+            <li><strong>Analytics Cookies:</strong> These help us understand how visitors interact with our website by collecting and reporting information anonymously.</li>
+            <li><strong>Functionality Cookies:</strong> These enable enhanced functionality and personalization, such as remembering your login state.</li>
           </ul>
           <h3>Third-Party Cookies</h3>
           <p>We may allow trusted third-party services to place cookies on your device for analytics and advertising purposes. These third parties have their own privacy policies governing the use of such cookies.</p>
@@ -1285,37 +1302,29 @@
       </div>
     </div>
     <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
+    <div id="contactModal" class="modal" role="dialog" aria-labelledby="contactModalTitle" aria-modal="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Contact Us</h2>
-          <button class="close-modal" onclick="closeModal('contactModal')" aria-label="Close">&times;</button>
+          <h2 id="contactModalTitle" class="modal-title">Contact Us</h2>
+          <button class="close-modal" onclick="closeModal('contactModal')" aria-label="Close contact dialog">&times;</button>
         </div>
         <div class="modal-body">
           <p>We'd love to hear from you! Whether you have questions, feedback, or need assistance, our team is here to help.</p>
           <h3>General Inquiries</h3>
-          <p>For general questions about MetaWide, please email us at: <br>
-            <strong>
-              <a href="mailto:contact@metawide.github.io">contact@metawide.github.io</a>
-            </strong>
+          <p>For general questions about MetaWide, please email us at:<br>
+            <strong><a href="mailto:contact@metawide.github.io">contact@metawide.github.io</a></strong>
           </p>
           <h3>Technical Support</h3>
-          <p>If you're experiencing technical issues or need help with your account: <br>
-            <strong>
-              <a href="mailto:support@metawide.github.io">support@metawide.github.io</a>
-            </strong>
+          <p>If you're experiencing technical issues or need help with your account:<br>
+            <strong><a href="mailto:support@metawide.github.io">support@metawide.github.io</a></strong>
           </p>
           <h3>Privacy & Legal</h3>
-          <p>For privacy concerns or legal inquiries: <br>
-            <strong>
-              <a href="mailto:legal@metawide.github.io">legal@metawide.github.io</a>
-            </strong>
+          <p>For privacy concerns or legal inquiries:<br>
+            <strong><a href="mailto:legal@metawide.github.io">legal@metawide.github.io</a></strong>
           </p>
           <h3>Partnership Opportunities</h3>
-          <p>Interested in partnering with MetaWide? <br>
-            <strong>
-              <a href="mailto:partnerships@metawide.github.io">partnerships@metawide.github.io</a>
-            </strong>
+          <p>Interested in partnering with MetaWide?<br>
+            <strong><a href="mailto:partnerships@metawide.github.io">partnerships@metawide.github.io</a></strong>
           </p>
           <h3>Response Time</h3>
           <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent matters, please indicate "URGENT" in your email subject line.</p>
@@ -1325,23 +1334,36 @@
       </div>
     </div>
     <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="cookie-consent active">
+    <aside id="cookieConsent" class="cookie-consent active" role="region" aria-label="Cookie consent banner">
       <div class="cookie-content">
-        <div class="cookie-text"> We use cookies and similar technologies to enhance your experience, analyze site traffic, and personalize content. By continuing to use MetaWide, you consent to our use of cookies. Learn more in our <a href="#" onclick="openModal('cookieModal'); return false;">Cookie Policy</a> and <a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>. </div>
+        <div class="cookie-text">
+          We use cookies and similar technologies to enhance your experience, analyze site traffic, and personalize content. By continuing to use MetaWide, you consent to our use of cookies. Learn more in our <a href="#" onclick="openModal('cookieModal'); return false;">Cookie Policy</a> and <a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>.
+        </div>
         <div class="cookie-buttons">
-          <button class="btn btn-secondary" onclick="declineCookies()">Decline</button>
-          <button class="btn btn-primary" onclick="acceptCookies()">Accept All</button>
+          <button class="btn btn-secondary" onclick="declineCookies()" aria-label="Decline cookies">Decline</button>
+          <button class="btn btn-primary" onclick="acceptCookies()" aria-label="Accept all cookies">Accept All</button>
         </div>
       </div>
-    </div>
+    </aside>
+    <!-- JavaScript -->
     <script>
       function openModal(modalId) {
-        document.getElementById(modalId).classList.add('active');
-        document.body.style.overflow = 'hidden';
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          const closeButton = modal.querySelector('.close-modal');
+          if (closeButton) {
+            closeButton.focus();
+          }
+        }
       }
       function closeModal(modalId) {
-        document.getElementById(modalId).classList.remove('active');
-        document.body.style.overflow = 'auto';
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
       }
       window.onclick = function(event) {
         if (event.target.classList.contains('modal')) {
@@ -1351,18 +1373,27 @@
       }
       function acceptCookies() {
         localStorage.setItem('cookieConsent', 'accepted');
-        document.getElementById('cookieConsent').classList.remove('active');
-        document.getElementById('cookieConsent').style.display = 'none';
+        const banner = document.getElementById('cookieConsent');
+        if (banner) {
+          banner.classList.remove('active');
+          banner.style.display = 'none';
+        }
       }
       function declineCookies() {
         localStorage.setItem('cookieConsent', 'declined');
-        document.getElementById('cookieConsent').classList.remove('active');
-        document.getElementById('cookieConsent').style.display = 'none';
+        const banner = document.getElementById('cookieConsent');
+        if (banner) {
+          banner.classList.remove('active');
+          banner.style.display = 'none';
+        }
       }
       window.addEventListener('load', function() {
         const consent = localStorage.getItem('cookieConsent');
         if (consent === 'accepted' || consent === 'declined') {
-          document.getElementById('cookieConsent').style.display = 'none';
+          const banner = document.getElementById('cookieConsent');
+          if (banner) {
+            banner.style.display = 'none';
+          }
         }
       });
       document.addEventListener('keydown', function(event) {
@@ -1373,6 +1404,22 @@
             document.body.style.overflow = 'auto';
           });
         }
+      });
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#' && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              history.pushState(null, null, href);
+            }
+          }
+        });
       });
     </script>
   </body>
